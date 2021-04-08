@@ -1,0 +1,25 @@
+From adb932f2f5202cb2ebd6c5d0b8afd50186ad6152 Mon Sep 17 00:00:00 2001
+From: Jason Furmanek <furmanek@us.ibm.com>
+Date: Wed, 7 Apr 2021 22:16:29 -0500
+Subject: [PATCH] patch gensim deps
+
+---
+ recipe/meta.yaml | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/recipe/meta.yaml b/recipe/meta.yaml
+index 4225f69..fd14d6c 100644
+--- a/recipe/meta.yaml
++++ b/recipe/meta.yaml
+@@ -26,6 +26,8 @@ requirements:
+     - requests
+     - sentencepiece
+     - tqdm
++    - google-api-core =1.20.0
++    - google-cloud-core =1.4.3
+ 
+ test:
+   imports:
+-- 
+1.8.3.1
+

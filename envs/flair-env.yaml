@@ -1,0 +1,11 @@
+imported_envs:
+  - https://raw.githubusercontent.com/open-ce/open-ce/main/envs/pytorch-env.yaml
+  - bpemb-env.yaml
+packages:
+  - feedstock: https://github.com/conda-forge/langdetect-feedstock
+  - feedstock: https://github.com/conda-forge/gdown-feedstock
+  - feedstock: https://github.com/conda-forge/hyperopt-feedstock
+  - feedstock: https://github.com/conda-forge/sqlitedict-feedstock
+  - feedstock: https://github.com/conda-forge/segtok-feedstock
+  - feedstock: https://github.com/conda-forge/python-flair-feedstock
+    git_tag: d3369eef4186a78a3165e608109da73cd60424b1  #6.1

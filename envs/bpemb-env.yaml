@@ -1,0 +1,6 @@
+imported_envs:
+  - https://raw.githubusercontent.com/open-ce/open-ce/main/envs/transformers-env.yaml
+packages:
+  - feedstock: https://github.com/conda-forge/bpemb-feedstock
+    patches:
+      - ../feedstock-patches/bpemb/0001-patch-gensim-deps.patch
