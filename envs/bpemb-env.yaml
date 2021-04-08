@@ -3,4 +3,10 @@ imported_envs:
 packages:
   - feedstock: https://github.com/conda-forge/bpemb-feedstock
     patches:
-      - ../feedstock-patches/bpemb/0001-patch-gensim-deps.patch
+      - ../feedstock-patches/bpemb/0001-patch-gensim-deps.patch   
+
+# The patch is needed because defaults packages for
+# google-api-core and google-cloud-core don't
+# match the code within so pip check fails
+# which fails the bpemb feedstock. :/
+# This patch enforces a working combination
