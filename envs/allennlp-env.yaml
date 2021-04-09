@@ -1,0 +1,23 @@
+imported_envs:
+  - https://raw.githubusercontent.com/open-ce/open-ce/main/envs/spacy-env.yaml
+  - https://raw.githubusercontent.com/open-ce/open-ce/main/envs/pytorch-env.yaml
+  - https://raw.githubusercontent.com/open-ce/open-ce/main/envs/transformers-env.yaml
+packages:
+  - feedstock: https://github.com/conda-forge/jsonnet-feedstock
+  - feedstock: https://github.com/conda-forge/overrides-feedstock
+  - feedstock: http://github.com/conda-forge/pytest-describe-feedstock
+    git_tag: 862e2740944c5d4825bf51443ddb2ecd2b6e7462  #0.12.0
+  - feedstock: https://github.com/conda-forge/graphql-core-feedstock
+  - feedstock: https://github.com/conda-forge/gql-feedstock
+  - feedstock: https://github.com/conda-forge/nvidia-ml-feedstock
+  - feedstock: https://github.com/conda-forge/sentry-sdk-feedstock
+  - feedstock: https://github.com/conda-forge/shortuuid-feedstock
+  - feedstock: https://github.com/conda-forge/wandb-feedstock
+    git_tag: d10ba9963935dc65e8263236bab4e2daffe7762a
+    patches:
+      - ../feedstock-patches/wandb/0001-protobuf-update.patch
+  - feedstock: http://github.com/conda-forge/tensorboardx-feedstock
+  - feedstock: https://github.com/conda-forge/allennlp-feedstock
+    git_tag: 61fda83bda4d65003babe9e2a89408d1531422f   #2.2.0
+    patches:
+      - ../feedstock-patches/allennlp/0001-no-spacy-tests.patch

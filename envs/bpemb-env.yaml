@@ -2,6 +2,7 @@ imported_envs:
   - https://raw.githubusercontent.com/open-ce/open-ce/main/envs/transformers-env.yaml
 packages:
   - feedstock: https://github.com/conda-forge/bpemb-feedstock
+    git_tag: 12be6b090d9209332d0884e101f847355371e7be
     patches:
       - ../feedstock-patches/bpemb/0001-patch-gensim-deps.patch   
 
@@ -10,3 +11,4 @@ packages:
 # match the code within so pip check fails
 # which fails the bpemb feedstock. :/
 # This patch enforces a working combination
+#

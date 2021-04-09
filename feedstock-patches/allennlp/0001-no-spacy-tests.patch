@@ -1,0 +1,39 @@
+From ad594e1183cb28909e106162a5bda4e6f9dbd775 Mon Sep 17 00:00:00 2001
+From: Jason Furmanek <furmanek@us.ibm.com>
+Date: Fri, 9 Apr 2021 13:44:17 -0500
+Subject: [PATCH] no spacy tests
+
+---
+ recipe/meta.yaml | 4 ----
+ 1 file changed, 4 deletions(-)
+
+diff --git a/recipe/meta.yaml b/recipe/meta.yaml
+index 0742dd0..34d9c05 100644
+--- a/recipe/meta.yaml
++++ b/recipe/meta.yaml
+@@ -1,7 +1,5 @@
+ {% set version = "2.2.0" %}
+ 
+-{% set spacy_model = "en_core_web_sm" %}
+-
+ package:
+   name: allennlp
+   version: {{ version }}
+@@ -62,14 +60,12 @@ test:
+     - matplotlib
+     - pytest
+     - responses >=0.12.1
+-    - spacy-model-{{ spacy_model }}
+   source_files:
+     - tests/
+     - test_fixtures/
+     # needed by one of the tests
+     - README.md
+   commands:
+-    - python -m spacy link {{ spacy_model }} {{ spacy_model }}
+     - allennlp test-install
+     - pytest tests/
+   imports:
+-- 
+2.23.0
+
