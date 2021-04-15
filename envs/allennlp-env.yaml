@@ -7,7 +7,10 @@ packages:
   - feedstock: https://github.com/conda-forge/overrides-feedstock
   - feedstock: http://github.com/conda-forge/pytest-describe-feedstock
     git_tag: 862e2740944c5d4825bf51443ddb2ecd2b6e7462  #0.12.0
+  - feedstock: https://github.com/conda-forge/rx-feedstock
+    git_tag: c626ad3315a3bf84df2c60ca212b39192fa94d3a  #1.6.1
   - feedstock: https://github.com/conda-forge/graphql-core-feedstock
+    git_tag: adf1788ff7557cce1aec90cb1e165265b330a8b0  #2.3.2
   - feedstock: https://github.com/conda-forge/gql-feedstock
   - feedstock: https://github.com/conda-forge/nvidia-ml-feedstock
   - feedstock: https://github.com/conda-forge/sentry-sdk-feedstock
