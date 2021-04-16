@@ -1,0 +1,75 @@
+From 4932c60e84ea8e5b805f116b6ce8a9f62a5e4614 Mon Sep 17 00:00:00 2001
+From: Jason Furmanek <furmanek@us.ibm.com>
+Date: Thu, 15 Apr 2021 21:03:37 -0500
+Subject: [PATCH] updates
+
+---
+ recipe/meta.yaml                                         |   5 +----
+ recipe/patches/0003-remove-additive-attention-test.patch | Bin 0 -> 2050 bytes
+ 2 files changed, 1 insertion(+), 4 deletions(-)
+ create mode 100644 recipe/patches/0003-remove-additive-attention-test.patch
+
+diff --git a/recipe/meta.yaml b/recipe/meta.yaml
+index 0742dd0..9c56c60 100644
+--- a/recipe/meta.yaml
++++ b/recipe/meta.yaml
+@@ -1,7 +1,5 @@
+ {% set version = "2.2.0" %}
+ 
+-{% set spacy_model = "en_core_web_sm" %}
+-
+ package:
+   name: allennlp
+   version: {{ version }}
+@@ -16,6 +14,7 @@ source:
+       # development mode, so patch it that we can properly test the package here.
+       - patches/0001-patch-AllenNlpTestCase-so-that-test-suite-can-be-run.patch
+       - patches/0002-look-for-README-in-packaging-compatible-location.patch
++      - patches/0003-remove-additive-attention-test.patch
+ 
+ build:
+   entry_points:
+@@ -62,14 +61,12 @@ test:
+     - matplotlib
+     - pytest
+     - responses >=0.12.1
+-    - spacy-model-{{ spacy_model }}
+   source_files:
+     - tests/
+     - test_fixtures/
+     # needed by one of the tests
+     - README.md
+   commands:
+-    - python -m spacy link {{ spacy_model }} {{ spacy_model }}
+     - allennlp test-install
+     - pytest tests/
+   imports:
+diff --git a/recipe/patches/0003-remove-additive-attention-test.patch b/recipe/patches/0003-remove-additive-attention-test.patch
+new file mode 100644
+index 0000000000000000000000000000000000000000..4352a9b0082e05c73eca25a3f1cd47a6f5949217
+GIT binary patch
+literal 2050
+zcmbVNU2m&K5PjcYG0GEGV7*{4U^SJkTUk}5R#&=ti!8K;A*SW4EaZN){qLP+!ATsq
+zYJ)6$S!T|hb7olYyQTs>Mo}mujHRFFezx)hxe8)mgqaA^G>+p`cp~&8__?X!6Sm-n
+zAjD?;fG32@_5`zmpQNII{m@mi#^2z(d|GV>#fxLb)28~K{UCeX!2M~k!3|*7c7))$
+zAi_-$Zd?J52!vpthU2f8_8WNkxV!)G;{iIXnkNLAWkp};Mc-rH7gVoD)idTe4jY$h
+zSvA>EqFSCqmUC8e-b!>9Z@<Eyu=0SCuUrgV$cqvoJ<0kJGh2sdSfVbgEN8*Y9RgKE
+zaD`a={yR7@mKAwUBp!<%<We*HpCXR$NMfTB%#6er3RqER_yux#4D&4FT$oEc{4RFv
+z_VyN*89puRp)A>U3yy1(lefYau-!5z*E3iTRr{4|?M3|vMb$PPnV}SReIm=MQGJ5H
+z53*#=^sH~X^fV=pYhKs9m7T1x$8JXWIBzg#ij`%FbzQc48Y>!~32qEjmod{Q@$=lw
+z;k#)Lck>utW*YQMK|5Xim$JPlogbt^&5Ai`NkT#Iy@9nZGZq`>09_g8<ESNh(|wj*
+zmShd8MApf9*4vKWgS594mie5eGe?gU+<}p7{c-a|Z(7qOSyA0=z_a0|l6_ZvnKo9m
+zQ8)BXm&G@vfW0gg{<SbPG~is3Am8xky19udX_=oZnLPQNn3^*!-9yW?^&V^0bk@Uz
+zBRG*0e08uv-vs(5I2;yN5r_YPD7c_ghzku!Kd;x0e((?APl@sD-{?-bZ(&TT?tl@v
+zFB{pPRSF*3bO`cDlM>w5B4gt5?DyzYiq`?2!*pvNUf+&eMyaMn2b$47dPy~@)nth&
+zOjetiNyo^GXqoN9!M+CVcoQl`ow3&%mEh=^fu_b$F;X^qGs+wrJARSp7tn|2N-tdK
+zPz_~ICeGt$O}^SN8?@jV_A)(L3qBq%){As=w9wy*M&artTZFqiu!w{IChXM-WIfZ-
+zej0=e%GZ2%c^n2Jqyi*f_;DOYE3(Gro*S-3tc|5kdm;#;^`!-4<H#*P3f%RY{L{;L
+iEsTdzEWAjYO08Olo)@^6`7iHDode9}5npkavA+SMvRR@4
+
+literal 0
+HcmV?d00001
+
+-- 
+1.8.3.1
+

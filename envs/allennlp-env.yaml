@@ -23,4 +23,4 @@ packages:
   - feedstock: https://github.com/conda-forge/allennlp-feedstock
     git_tag: 61fda83bda4d65003babe9e2a89408d1531422f   #2.2.0
     patches:
-      - ../feedstock-patches/allennlp/0001-no-spacy-tests.patch
+      - ../feedstock-patches/allennlp/0001-updates.patch
