@@ -18,7 +18,7 @@ packages:
   - feedstock: https://github.com/conda-forge/wandb-feedstock
     git_tag: d10ba9963935dc65e8263236bab4e2daffe7762a
     patches:
-      - ../feedstock-patches/wandb/0001-protobuf-update.patch
+      - ../feedstock-patches/wandb/0001-update-protobuf.patch
   - feedstock: http://github.com/conda-forge/tensorboardx-feedstock
   - feedstock: https://github.com/conda-forge/allennlp-feedstock
     git_tag: 61fda83bda4d65003babe9e2a89408d1531422f   #2.2.0

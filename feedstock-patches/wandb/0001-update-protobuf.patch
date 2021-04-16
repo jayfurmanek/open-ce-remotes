@@ -1,0 +1,33 @@
+From 0c01c149c8250bff20fc008ed3172a62d93601ab Mon Sep 17 00:00:00 2001
+From: Jason Furmanek <furmanek@us.ibm.com>
+Date: Thu, 15 Apr 2021 21:43:32 -0500
+Subject: [PATCH] update protobuf
+
+---
+ recipe/meta.yaml | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+
+diff --git a/recipe/meta.yaml b/recipe/meta.yaml
+index ae30fcf..b8cd646 100644
+--- a/recipe/meta.yaml
++++ b/recipe/meta.yaml
+@@ -30,7 +30,7 @@ requirements:
+     - gql
+     - nvidia-ml
+     - promise >=2.0,<3
+-    - protobuf >=3.12.0
++    - protobuf {{ protobuf }}
+     - psutil >=5.0.0
+     - python >=3.6
+     - python-dateutil >=2.6.1
+@@ -46,7 +46,6 @@ test:
+   imports:
+     - wandb
+   commands:
+-    - pip check
+     - wandb --help
+     - wb --help
+   requires:
+-- 
+1.8.3.1
+
