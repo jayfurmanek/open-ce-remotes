@@ -1,0 +1,2 @@
+packages:
+  - feedstock: http://github.com/conda-forge/mpi4py-feedstock
