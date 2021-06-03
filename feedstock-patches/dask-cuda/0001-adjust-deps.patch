@@ -1,0 +1,31 @@
+From abe07a91b9939e43e5c2f587c96b79ceae570d37 Mon Sep 17 00:00:00 2001
+From: Jason Furmanek <furmanek@us.ibm.com>
+Date: Wed, 2 Jun 2021 23:15:36 -0500
+Subject: [PATCH] adjust deps
+
+---
+ recipe/meta.yaml | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+
+diff --git a/recipe/meta.yaml b/recipe/meta.yaml
+index b764be0..c52099a 100644
+--- a/recipe/meta.yaml
++++ b/recipe/meta.yaml
+@@ -23,11 +23,12 @@ requirements:
+     - pip
+   run:
+     - python >=3.6
+-    - dask >=2.9.0
+-    - distributed >=2.18.0
++    - dask >=2.22.0,<=2021.4.0
++    - distributed >=2.22.0,<=2021.4.0
+     - numba >=0.50.0,!=0.51.0
+     - numpy >=1.16.0
+     - pynvml >=8.0.3
++    - click {{ click }}
+ 
+ test:
+   imports:
+-- 
+2.23.0
+

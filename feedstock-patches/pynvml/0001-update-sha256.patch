@@ -1,0 +1,25 @@
+From 7949335f1db3149a00b678955be22ad0888fe0ac Mon Sep 17 00:00:00 2001
+From: Jason Furmanek <furmanek@us.ibm.com>
+Date: Wed, 2 Jun 2021 15:31:14 -0500
+Subject: [PATCH] update sha256
+
+---
+ recipe/meta.yaml | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/recipe/meta.yaml b/recipe/meta.yaml
+index 7424f20..5880406 100644
+--- a/recipe/meta.yaml
++++ b/recipe/meta.yaml
+@@ -7,7 +7,7 @@ package:
+ 
+ source:
+   url: https://github.com/gpuopenanalytics/{{ name }}/archive/{{ version }}.tar.gz
+-  sha256: 759603235ca8b1e39125db9cf98b132734438bb2f5bc69eb27e73c75646a29c8 
++  sha256: 9d20a2d1db48e6687145858ec987972738216472ccbcfc091e5075829cc2c506
+ 
+ build:
+   noarch: python
+-- 
+2.23.0
+

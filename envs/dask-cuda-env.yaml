@@ -1,0 +1,7 @@
+packages:
+  - feedstock: http://github.com/conda-forge/pynvml-feedstock
+    patches:
+      - ../feedstock-patches/pynvml/0001-update-sha256.patch
+  - feedstock: http://github.com/conda-forge/dask-cuda-feedstock
+    patches:
+      - ../feedstock-patches/dask-cuda/0001-adjust-deps.patch
